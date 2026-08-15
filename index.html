@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&R Charcuterie</title>
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charcuterie</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <a href="/" class="logo"><img src="t4jKO-removebg-preview.png" alt="logo-rr"></a>
+
+    <button class="menu-toggle" aria-label="Menu openen">☰</button>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+
+      <!-- Aanbod met dropdown -->
+      <div class="dropdown">
+        <a href="/#menu" class="dropdown-toggle">Aanbod</a>
+        <div class="dropdown-menu">
+          <a href="charcuterie-basis.html">Basis</a>
+          <a href="/charcurterie-knapper.html">Knapper & Luxe</a>
+          <a href="/charcuterie/333-signature">333 Signature</a>
+        </div>
+      </div>
+
+      <a href="/#over">Over</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="hero-title">
+  <picture>
+    <!-- Gebruik modern .webp met fallback -->
+    <source srcset="world-tapa-s-day-celebration-with-snacks.jpg" type="image/webp">
+    <img 
+      src="world-tapa-s-day-celebration-with-snacks.jpg" 
+      alt="Ambachtelijke charcuterie plank met verse ingrediënten, kazen en vleeswaren" 
+      class="hero-img" 
+      loading="eager" 
+      fetchpriority="high"
+    >
+  </picture>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content container">
+    <h1 id="hero-title" class="hero-title">Ambachtelijke charcuterie</h1>
+    <p class="hero-subtitle">
+      Een mobiele beleving van smaak, vakmanschap en pure elegantie.
+    </p>
+    <a href="#contact" class="btn btn-primary">Boek ons nu</a>
+  </div>
+</section>
+
+<!-- HOE WERKT HET – Timeline -->
+<section class="how-it-works">
+  <div class="container">
+    <h2 class="section-title">Hoe werkt het?</h2>
+    <p class="section-subtitle">Van eerste idee tot zorgeloos genieten – in 5 heldere stappen.</p>
+
+    <a href="#menu">
+    <div class="timeline">
+      <div class="timeline-item clickable" data-step="1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Kies of bedenk samen</h3>
+          <p>Kies uit ons mooie aanbod (Basis, Knapper & Luxe of 333 Signature) óf wij bedenken samen iets volledig customs dat perfect aansluit bij jouw evenement, thema of smaak.</p>
+        </div>
+      </div>
+      </a>
+
+      <div class="timeline-item" data-step="2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Contact opnemen</h3>
+          <p>Vul het formulier in, stuur een appje of bel ons. Vertel ons je datum, aantal personen, locatie, dieetwensen en wat je in gedachten hebt.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-step="3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Persoonlijke offerte</h3>
+          <p>Binnen 24 uur (vaak sneller) ontvang je een duidelijke, vrijblijvende offerte met prijs, inhoud, levering en alle details.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-step="4">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Bevestigen & betalen</h3>
+          <p>Als de offerte goed is, bevestig je met een aanbetaling (meestal 50%). De rest regel je op de dag zelf of achteraf – simpel en zonder gedoe.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-step="5">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Zorgeloos genieten</h3>
+          <p>Wij komen op tijd, bouwen alles op, stylen live en zorgen voor een perfecte presentatie. Jij en je gasten genieten alleen maar. Wij ruimen op als dat nodig is.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-cta">
+      <a href="/#contact" class="btn btn-primary">Bekijk ons aanbod</a>
+    </div>
+  </div>
+</section>
+
+<section class="comparison-section" id="menu">
+  <div class="container">
+    <div class="background-intro">
+    <h2 class="section-title">Kies jouw perfecte beleving</h2>
+    <p class="section-subtitle">Drie stijlen, één doel: onvergetelijke smaak & elegantie.</p>
+</div>
+
+    <div class="comparison-grid">
+      <!-- Basis -->
+      <div class="comparison-item">
+        <h3>Charcuterie Basis</h3>
+        <p class="tagline">Klassiek & toegankelijk</p>
+        <ul>
+          <li>3 kazen + 2-3 vleeswaren</li>
+          <li>Seizoensfruit, olijven & noten</li>
+          <li>Knapperige crackers & jam</li>
+          <li>Voor 4-8 personen</li>
+          <li>Vanaf €95</li>
+        </ul>
+        <div class="actions">
+          <a href="/charcuterie-basis.html" class="btn btn-secondary">Details & foto's</a>
+          <a href="#contact" class="btn btn-primary">Boek ons nu</a>
+        </div>
+      </div>
+
+      <!-- Knapper & Luxe -->
+      <div class="comparison-item featured">
+        <h3>Knapper & Luxe</h3>
+        <p class="tagline">Textuur & verfijning</p>
+        <ul>
+          <li>4+ kazen incl. blue & aged</li>
+          <li>Premium meats + crispy toevoegingen</li>
+          <li>Truffelhoning, kruiden & spreads</li>
+          <li>Broodsticks, prosciutto chips</li>
+          <li>Voor 6-12 personen</li>
+          <li>Vanaf €145</li>
+        </ul>
+        <div class="actions">
+          <a href="/knapper-luxe" class="btn btn-secondary">Details & foto's</a>
+          <a href="#contact" class="btn btn-primary">Boek</a>
+        </div>
+      </div>
+
+      <!-- 333 Signature -->
+      <div class="comparison-item">
+        <h3>333 Signature</h3>
+        <p class="tagline">Onze topmethode</p>
+        <ul>
+          <li>3 kazen – 3 meats – 3 sides</li>
+          <li>Seizoensupgrades & balans</li>
+          <li>Artistieke opmaak op locatie</li>
+          <li>Textuur & smaakcontrast</li>
+          <li>Voor 8-15 personen</li>
+          <li>Vanaf €195</li>
+        </ul>
+        <div class="actions">
+          <a href="/333-signature" class="btn btn-secondary">Details & foto's</a>
+          <a href="#contact" class="btn btn-primary">Boek</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="over" class="over-section">
+  <div class="container">
+    <h2 class="section-title">Over Ruben en Ryan</h2>
+    
+    <div class="over-grid">
+      <div class="over-text">
+        <p class="intro">
+          Wij zijn Ruben en Ryan – twee vrienden met een gedeelde passie voor goed eten, ambacht en het creëren van momenten die mensen bijblijven.
+        </p>
+        
+        <p>
+          Wat begon als een hobby – het samenstellen van charcuterieplanken voor familie en vrienden – groeide al snel uit tot iets groters. We merkten dat mensen niet alleen de smaken waarderen, maar vooral het gevoel: de zorg, de aandacht voor detail, de verrassing bij het zien van een perfect opgemaakte plank.
+        </p>
+        
+        <p>
+          Daarom besloten we in 2025 om er serieus werk van te maken: mobiele charcuteriebelevingen op locatie, altijd vers, altijd met seizoen-ingrediënten en met oog voor kwaliteit boven kwantiteit.
+        </p>
+        
+        <ul class="highlights">
+          <li>Altijd ambachtelijk en lokaal waar mogelijk</li>
+          <li>Persoonlijk afgestemd op jouw evenement</li>
+          <li>Van intiem diner tot bruiloft of bedrijfsborrel</li>
+          <li>Met liefde gemaakt – letterlijk en figuurlijk</li>
+        </ul>
+        
+        <p class="closing">
+          We kijken ernaar uit om ook voor jou een onvergetelijke tafel te maken.
+        </p>
+      </div>
+      
+      <div class="over-images">
+        <img src="78e09992-76f4-4b51-9590-02bd3b7052a8.webp" alt="Ruben en Ryan aan het werk" class="over-img">
+        <img src="chef-working-on-a-charcuterie.jpg" alt="Samen een plank stylen" class="over-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  <!-- Verplichte Web3Forms velden -->
+  <input type="hidden" name="access_key" value="3b66edbd-1768-4b18-ae00-25d5af1dde76">
+  <input type="text" name="bot-field" style="display:none">
+  <input type="hidden" name="subject" value="Nieuwe charcuterie aanvraag van website">
+
+  <div class="container" id="contact">
+    <h2 class="section-title">Neem contact op</h2>
+    <p class="section-subtitle">
+      Vertel ons wat je in gedachten hebt – datum, aantal personen, gewenste stijl, locatie, dieetwensen of speciale verzoeken.<br>
+      We reageren meestal binnen 24 uur met een vrijblijvende offerte.
+    </p>
+
+    <!-- Persoonlijke gegevens -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Naam *</label>
+        <input type="text" id="name" name="naam" required placeholder="Hoe mogen we je aanspreken?">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">E-mailadres *</label>
+        <input type="email" id="email" name="email" required placeholder="jouw@email.nl">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Telefoonnummer</label>
+        <input type="tel" id="phone" name="telefoon" placeholder="06-12345678">
+      </div>
+      
+      <div class="form-group">
+        <label for="event_date">Gewenste datum / periode *</label>
+        <input type="text" id="event_date" name="datum" required placeholder="bijv. 15 juni 2026 of weekend juni/juli">
+      </div>
+    </div>
+
+    <!-- Evenement details -->
+    <div class="form-group">
+      <label for="event_type">Type evenement *</label>
+      <select id="event_type" name="evenement_type" required>
+        <option value="" disabled selected>Kies een type</option>
+        <option value="borrel">Borrel / verjaardag</option>
+        <option value="diner">Klein diner / thuis</option>
+        <option value="bruiloft">Bruiloft / jubileum</option>
+        <option value="bedrijf">Bedrijfsfeest / receptie</option>
+        <option value="babyborrel">Babyborrel / gender reveal</option>
+        <option value="ander">Iets anders</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="persons">Aantal personen (ongeveer) *</label>
+        <input type="number" id="persons" name="aantal_personen" min="4" max="50" required placeholder="bijv. 12">
+      </div>
+      
+      <div class="form-group">
+        <label for="location">Locatie / postcode</label>
+        <input type="text" id="location" name="locatie" placeholder="bijv. Utrecht, postcode of adres">
+      </div>
+    </div>
+
+    <!-- Voorkeuren & stijl -->
+    <div class="form-group">
+      <label for="style">Gewenste stijl / pakket</label>
+      <select id="style" name="pakket">
+        <option value="">Nog geen voorkeur</option>
+        <option value="basis">Basis</option>
+        <option value="knapper-luxe">Knapper & Luxe</option>
+        <option value="333-signature">333 Signature</option>
+        <option value="custom">Custom / eigen idee</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Dieetwensen / allergieën / bijzonderheden</label>
+      <textarea name="dieet" rows="3" placeholder="bijv. vegetarisch, vegan, glutenvrij, notenallergie, geen varken, etc."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Bericht / extra wensen</label>
+      <textarea id="message" name="bericht" rows="6" required placeholder="Vertel ons alles wat belangrijk is: thema, kleuren, tijdstip, budgetindicatie, etc."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Verstuur aanvraag</button>
+
+    <p class="form-note">* verplichte velden</p>
+  </div>
+</form>
+   <!-- FOOTER -->
+ <footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-links">
+        <h4>Snelle navigatie</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#menu">Aanbod</a></li>
+          <li><a href="/#over">Over ons</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><strong>WhatsApp / bellen:</strong> <a href="tel:+31612345678">06-12 34 56 78</a></p>
+        <p><strong>E-mail:</strong> <a href="mailto:hallo@charcuterierubenryan.nl">hallo@charcuterierubenryan.nl</a></p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Volg ons</h4>
+        <div class="social-icons">
+          <a href="https://instagram.com/charcuterierubenryan" target="_blank" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.326 3.608 1.301.975.975 1.239 2.242 1.301 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.069 4.85c-.062 1.366-.326 2.633-1.301 3.608-.975.975-2.242 1.239-3.608 1.301-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.069c-1.366-.062-2.633-.326-3.608-1.301-.975-.975-1.239-2.242-1.301-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.069-4.85c.062-1.366.326-2.633 1.301-3.608.975-.975 2.242-1.239 3.608-1.301 1.266-.058 1.646-.069 4.85-.069zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+          </a>
+          <!-- Voeg Facebook, TikTok etc. toe als je wilt -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Charcuterie Ruben en Ryan – Ambachtelijk & met passie</p>
+      <div class="footer-legal">
+        <a href="/privacy">Privacyverklaring</a>
+        <a href="/algemene-voorwaarden">Algemene voorwaarden</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script>
+  document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        window.location.href = 'bedankt.html';  // of 'bedankt.html' of volledige URL
+      } else {
+        alert('Er ging iets mis: ' + (result.message || 'Probeer opnieuw'));
+      }
+    } catch (error) {
+      alert('Verzenden mislukt – check je internet.');
+    }
+  });
+</script>
+    
+</body>
+</html>
+    
+</body>
+</html>
