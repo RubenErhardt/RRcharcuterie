@@ -9,11 +9,12 @@ html {
 }
   
   body {
+    --offwhite: #F8F6F1;
     min-height: 100vh;           /* pagina mag scrollen als content langer is */
     margin: 0;
     font-family: 'Libre Baskerville', serif;
     line-height: 1.6;
-    background: var(--offwhite); /* als je background hebt */
+    background-color: var(--offwhite)
   }
   
   h1, h2, h3 {
@@ -30,7 +31,7 @@ html {
     --charcoal: #111111;           /* dieper zwart voor maximale contrast */
     --header-bg: #ffffff;          /* bijna zwart, rijk & diep */
     --header-text: #111111;        /* puur wit – max contrast op donkere bg */
-    --accent: #f0d399;             /* helderder, warmer goud – knalt eruit */
+    --accent: #f1c977;             /* helderder, warmer goud – knalt eruit */
     --accent-dark: #d9b26f;        /* donkerdere goud voor diepte in gradients */
     --offwhite: #ffffff;           /* helder wit – beste achtergrond voor tekst */
     --taupe: #8c7f6b;              /* donkerdere neutraal voor secundair */
@@ -42,7 +43,7 @@ html {
   
   /* === HEADER === */
   .header {
-    background: var(--header-bg);
+    background: var(--offwhite);
     color: var(--header-text);
     position: sticky;
     top: 0;
@@ -553,7 +554,7 @@ html {
   
   .comparison-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* altijd 3 kolommen op desktop */
+    grid-template-columns: repeat(2, 1fr); /* altijd 3 kolommen op desktop */
     gap: 1.8rem;
     max-width: 1400px;
     margin: 0 auto;
