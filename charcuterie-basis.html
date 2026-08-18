@@ -412,6 +412,50 @@
     transition: all 0.3s ease;
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
   }
+
+  .product-details-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.product-details-image img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.download-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.download-overlay span {
+  padding: 12px 20px;
+  background: white;
+  color: #222;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.product-details-image:hover .download-overlay {
+  opacity: 1;
+}
+
+.product-details-image:hover img {
+  transform: scale(1.03);
+}
   
   .form-group input:focus,
   .form-group select:focus,
@@ -595,7 +639,7 @@
 
     .product-details-image img {
       width: 100%;
-      height: 550px;
+  
       object-fit: cover;
       border-radius: 18px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.15);
@@ -995,9 +1039,6 @@
         gap: 3rem;
       }
 
-      .product-details-image img {
-        height: 400px;
-      }
 
       .product-info-grid {
         grid-template-columns: 1fr;
@@ -1077,10 +1118,7 @@
         grid-template-columns: 1fr;
       }
 
-      .product-details-image img {
-        height: 320px;
-      }
-
+   
       .contact-form {
         padding: 2rem 1.2rem;
       }
@@ -1126,15 +1164,11 @@
 
     <nav class="nav">
       <a href="/">Home</a>
+      <a href="/#hoe-werkt-het">CONCEPT</a>
 
       <!-- Aanbod met dropdown -->
       <div class="dropdown">
         <a href="/#menu" class="dropdown-toggle">Aanbod</a>
-        <div class="dropdown-menu">
-          <a href="charcuterie-basis.html">Basis</a>
-          <a href="/charcuterie-luxer.html">Knapper & Luxe</a>
-          <a href="/charcuterie-333.html">333 Signature</a>
-        </div>
       </div>
 
       <a href="/#over">Over</a>
@@ -1144,86 +1178,7 @@
 </header>
 
 
-<!-- =========================================================
-     PRODUCT HERO
-========================================================= -->
 
-<section class="product-hero">
-
-  <div class="product-hero-image">
-
-    <img
-      src="charcuterie-basis.jpg"
-      alt="Charcuterie Basis met kazen, vleeswaren, fruit en crackers"
-    >
-
-    <div class="product-hero-overlay"></div>
-
-  </div>
-
-
-  <div class="product-hero-content">
-
-    <p class="product-eyebrow">
-      R&R CHARCUTERIE
-    </p>
-
-    <h1>
-      Charcuterie Basis
-    </h1>
-
-    <p class="product-hero-description">
-      Klassiek, toegankelijk en met aandacht samengesteld.
-      Een elegante charcuterieplank voor gezellige momenten,
-      diners en bijzondere gelegenheden.
-    </p>
-
-    <a href="#contact" class="btn btn-primary">
-      Boek deze plank
-    </a>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     INTRO
-========================================================= -->
-
-<section class="product-intro-section">
-
-  <div class="container">
-
-    <p class="product-label">
-      DE BASIS
-    </p>
-
-    <h2>
-      Klassiek & toegankelijk
-    </h2>
-
-    <p class="product-intro-text">
-      Onze Charcuterie Basis is gemaakt voor iedereen die wil
-      genieten van een mooie, smaakvolle charcuterieplank zonder
-      dat het onnodig ingewikkeld wordt.
-    </p>
-
-    <p class="product-intro-text">
-      We combineren zorgvuldig geselecteerde kazen en vleeswaren
-      met seizoensfruit, olijven, noten, crackers en een passende
-      jam of spread.
-    </p>
-
-    <p class="product-intro-text">
-      Alles wordt met aandacht samengesteld en stijlvol
-      gepresenteerd, zodat jij alleen nog maar hoeft te genieten.
-    </p>
-
-  </div>
-
-</section>
 
 
 
@@ -1237,15 +1192,21 @@
 
     <div class="product-details-grid">
 
-
-      <div class="product-details-image">
-
-        <img
-          src="charcuterie-basis-detail.jpg"
-          alt="Detail van de Charcuterie Basis"
+      <a 
+        href="The classic menu.pdf" 
+        download
+        class="product-details-image"
+        title="Download The Classic menu"
+      >
+        <img 
+          src="The Classic menu afbeelding.png"
+          alt="The Classic menu - Klik om het menu te downloaden"
         >
 
-      </div>
+        <div class="download-overlay">
+          <span>Bekijk & download menu</span>
+        </div>
+      </a>
 
 
       <div class="product-details-content">
@@ -1257,7 +1218,6 @@
         <h2>
           Alles voor een goede borrel
         </h2>
-
 
         <ul class="product-list">
 
@@ -1308,160 +1268,9 @@
 
 
 
-<!-- =========================================================
-     INFO KAARTEN
-========================================================= -->
-
-<section class="product-info-section">
-
-  <div class="container">
-
-    <div class="product-info-grid">
-
-
-      <div class="product-info-card">
-
-        <span class="product-info-icon">
-          ♢
-        </span>
-
-        <h3>
-          4–8 personen
-        </h3>
-
-        <p>
-          Een ideale hoeveelheid voor een gezellige borrel,
-          verjaardag of diner.
-        </p>
-
-      </div>
-
-
-      <div class="product-info-card">
-
-        <span class="product-info-icon">
-          ♢
-        </span>
-
-        <h3>
-          Vanaf €95
-        </h3>
-
-        <p>
-          De uiteindelijke prijs hangt af van het aantal personen
-          en eventuele persoonlijke wensen.
-        </p>
-
-      </div>
-
-
-      <div class="product-info-card">
-
-        <span class="product-info-icon">
-          ♢
-        </span>
-
-        <h3>
-          Vers samengesteld
-        </h3>
-
-        <p>
-          We werken zoveel mogelijk met verse en
-          seizoensgebonden ingrediënten.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
 
 
 
-<!-- =========================================================
-     VOOR WELKE GELEGENHEDEN
-========================================================= -->
-
-<section class="product-occasion-section">
-
-  <div class="container">
-
-    <p class="product-label">
-      PERFECT VOOR
-    </p>
-
-    <h2>
-      Van borrel tot bijzondere avond
-    </h2>
-
-
-    <div class="occasion-grid">
-
-
-      <div class="occasion-item">
-
-        <h3>
-          Verjaardag
-        </h3>
-
-        <p>
-          Een sfeervolle toevoeging aan iedere verjaardag
-          of gezellige avond met vrienden.
-        </p>
-
-      </div>
-
-
-      <div class="occasion-item">
-
-        <h3>
-          Thuisdiner
-        </h3>
-
-        <p>
-          Zet de plank op tafel als luxe voorgerecht,
-          borrelmoment of afsluiter.
-        </p>
-
-      </div>
-
-
-      <div class="occasion-item">
-
-        <h3>
-          Bedrijfsborrel
-        </h3>
-
-        <p>
-          Een toegankelijke en stijlvolle manier om
-          gasten of collega's te verrassen.
-        </p>
-
-      </div>
-
-
-      <div class="occasion-item">
-
-        <h3>
-          Speciale momenten
-        </h3>
-
-        <p>
-          Jubileum, housewarming, babyborrel of gewoon
-          omdat je iets te vieren hebt.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
 
 
 
@@ -1488,10 +1297,6 @@
       Wij zorgen voor de rest.
     </p>
 
-    <a href="#contact" class="btn btn-primary">
-      Boek Charcuterie Basis
-    </a>
-
   </div>
 
 </section>
@@ -1503,11 +1308,6 @@
     <input type="hidden" name="subject" value="Nieuwe charcuterie aanvraag van website">
   
     <div class="container" id="contact">
-      <h2 class="section-title">Neem contact op</h2>
-      <p class="section-subtitle">
-        Vertel ons wat je in gedachten hebt – datum, aantal personen, gewenste stijl, locatie, dieetwensen of speciale verzoeken.<br>
-        We reageren meestal binnen 24 uur met een vrijblijvende offerte.
-      </p>
   
       <!-- Persoonlijke gegevens -->
       <div class="form-row">
