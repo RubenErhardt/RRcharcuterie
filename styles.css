@@ -79,6 +79,8 @@ html {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+ 
   
   .nav {
     display: flex;
@@ -121,6 +123,9 @@ html {
   .logo img{
     width: 175px;
   }
+
+
+
   
   .menu-toggle {
     display: none;
@@ -1158,9 +1163,7 @@ html {
       display: none;
     }
   
-    .logo {
-      font-size: 1.35rem;
-    }
+  
   
     .menu-toggle {
       display: block;
@@ -1194,9 +1197,7 @@ html {
     .header .container {
       padding: 0.9rem 1.2rem;
     }
-    .logo {
-      font-size: 1.25rem;
-    }
+   
     .menu-toggle {
       font-size: 1.6rem;
     }
@@ -1204,3 +1205,9 @@ html {
       padding: 0 1.2rem;
     }
   }
+
+  @media (max-width: 700px) {
+  .logo img {
+    width: 100px;
+  }
+}
