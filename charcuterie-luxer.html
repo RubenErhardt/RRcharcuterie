@@ -56,156 +56,220 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
+    /* === HEADER === */
+  .header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201, 169, 110, 0.08);
+    transition: all 0.35s ease;
+  }
+  
+  .header.scrolled {
+    background: rgba(26, 24, 22, 0.92);
+    box-shadow: 0 6px 35px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(16px);
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    background: linear-gradient(90deg, var(--accent), #e8d5b7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+  }
+  
+  .nav a {
+    color: var(--header-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.28s ease;
+  }
+  
+  .nav a:hover,
+  .nav a.active {
+    color: var(--accent);
+  }
+  
+  .nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: -6px;
+    left: 0;
+    background: var(--accent);
+    transition: width 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  .nav a:hover::after,
+  .nav a.active::after {
+    width: 100%;
+  }
 
-    .header {
-      background: var(--header-bg);
-      color: var(--header-text);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.28);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(201,169,110,0.08);
+  .logo img{
+    width: 200px;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--header-text);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+  }
+  
+  /* === DROPDOWN === */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    color: var(--header-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    transition: color 0.28s ease;
+  }
+  
+  .dropdown-toggle:hover,
+  .dropdown-toggle.active {
+    color: var(--accent);
+  }
+  
+  /* Dropdown menu (verborgen standaard) */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--header-bg);
+    min-width: 180px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    border-radius: 8px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(201,169,110,0.15);
+    z-index: 999;
+    margin-top: 6px;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 0.9rem 1.5rem;
+    color: var(--header-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+  
+  .dropdown-menu a:hover {
+    background: rgba(201,169,110,0.15);
+    color: var(--accent);
+    padding-left: 1.8rem;
+  }
+  
+  /* Hover: toon dropdown op desktop */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* === DROPDOWN OP MOBIEL – veel schoner en intuïtiever === */
+  @media (max-width: 768px) {
+    /* Dropdown wrapper in mobiel menu */
+    .dropdown {
+      width: 100%;
     }
-
-    .header .container {
+  
+    /* De toggle-link (Aanbod) krijgt een pijltje of indicator */
+    .dropdown-toggle {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 0.8rem 2rem;
-    }
-
-    .logo {
-      display: block;
-      line-height: 0;
-    }
-
-    .logo img {
-      width: 200px;
-      max-width: 100%;
-      display: block;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 2.2rem;
-    }
-
-    .nav a {
-      color: var(--header-text);
-      font-size: 0.95rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      position: relative;
-      transition: all 0.28s ease;
-    }
-
-    .nav a:hover,
-    .nav a.active {
-      color: var(--accent-dark);
-    }
-
-    .nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 1.5px;
-      bottom: -6px;
-      left: 0;
-      background: var(--accent);
-      transition: width 0.35s ease;
-    }
-
-    .nav a:hover::after,
-    .nav a.active::after {
       width: 100%;
+      padding: 0.8rem 1rem;
+      cursor: pointer;
     }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
+  
+    .nav{
+      align-items: flex-start;
     }
-
+  
+    .dropdown-toggle::after {
+      content: '▼';
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+  
+    /* Als submenu open is: draai pijltje om */
+    .dropdown.open .dropdown-toggle::after {
+      transform: rotate(180deg);
+    }
+  
+    /* Submenu zelf */
     .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: var(--header-bg);
-      min-width: 200px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid rgba(201,169,110,0.15);
-      z-index: 999;
-      margin-top: 15px;
+      display: none; /* standaard dicht */
+      position: static;
+      background: rgba(0,0,0,0.15); /* subtiel donkerder voor contrast */
+      border: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0.5rem 0 0.5rem 1.5rem; /* lichte insprong */
+      border-left: 3px solid var(--accent);
     }
-
+  
     .dropdown-menu a {
       display: block;
-      padding: 0.9rem 1.5rem;
+      padding: 0.9rem 1rem;
+      font-size: 1rem;
       color: var(--header-text);
-      font-size: 0.9rem;
-      white-space: nowrap;
+      text-decoration: none;
     }
-
-    .dropdown-menu a::after {
-      display: none;
-    }
-
+  
     .dropdown-menu a:hover {
-      background: rgba(201,169,110,0.15);
-      color: var(--accent-dark);
+      background: rgba(201,169,110,0.2);
     }
-
-    .dropdown:hover .dropdown-menu {
+  
+    /* Toon submenu als .open class op .dropdown staat */
+    .dropdown.open .dropdown-menu {
       display: block;
     }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--header-text);
-      font-size: 1.8rem;
-      cursor: pointer;
-      padding: 0.5rem;
-    }
-
-    /* BUTTONS */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
-      padding: 1rem 2.4rem;
-      font-size: 1.05rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.4s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(145deg, var(--accent), #b8975c);
-      color: #1a1816;
-      box-shadow: 0 8px 25px rgba(201,169,110,0.35);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 16px 40px rgba(201,169,110,0.5);
-    }
+  }
 
     /* HERO */
 
@@ -393,6 +457,26 @@
       box-shadow: 0 10px 35px rgba(0,0,0,0.06);
       transition: transform 0.35s ease;
     }
+
+     .btn-primary {
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    border-radius: 50px;
+    background: linear-gradient(145deg, var(--accent), #b8975c);
+    color: #1a1816;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 12px 35px rgba(201,169,110,0.4);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(201,169,110,0.55);
+  }
 
     .product-info-card:hover {
       transform: translateY(-6px);
@@ -811,57 +895,26 @@
 
 <header class="header">
   <div class="container">
+    <a href="/" class="logo"><img src="t4jKO-removebg-preview.png" alt="logo-rr"></a>
 
-    <a href="/" class="logo">
-      <img src="t4jKO-removebg-preview.png" alt="R&R Charcuterie">
-    </a>
-
-    <button
-      class="menu-toggle"
-      aria-label="Menu openen"
-      aria-expanded="false"
-    >
-      ☰
-    </button>
+    <button class="menu-toggle" aria-label="Menu openen">☰</button>
 
     <nav class="nav">
-
       <a href="/">Home</a>
 
+      <!-- Aanbod met dropdown -->
       <div class="dropdown">
-
-        <a href="/#menu" class="dropdown-toggle">
-          Aanbod
-        </a>
-
+        <a href="/#menu" class="dropdown-toggle">Aanbod</a>
         <div class="dropdown-menu">
-
-          <a href="/charcuterie-basis.html">
-            Basis
-          </a>
-
-          <a href="/charcuterie-knapper.html">
-            Knapper & Luxe
-          </a>
-
-          <a href="/333-signature.html">
-            333 Signature
-          </a>
-
+          <a href="charcuterie-basis.html">Basis</a>
+          <a href="/charcuterie-luxer.html">Knapper & Luxe</a>
+          <a href="/charcuterie-333.html">333 Signature</a>
         </div>
-
       </div>
 
-      <a href="/#over">
-        Over
-      </a>
-
-      <a href="/#contact">
-        Contact
-      </a>
-
+      <a href="/#over">Over</a>
+      <a href="/#contact">Contact</a>
     </nav>
-
   </div>
 </header>
 
@@ -873,7 +926,7 @@
   <div class="product-hero-image">
 
     <img
-      src="charcuterie-knapper.jpg"
+      src="composition-different-delicacies-with-copy-space.jpg"
       alt="Knapper & Luxe charcuterieplank met luxe kazen, vleeswaren en krokante toppings"
     >
 
@@ -952,7 +1005,7 @@
       <div class="product-details-image">
 
         <img
-          src="charcuterie-knapper-detail.jpg"
+          src="chef-working-on-a-charcuterie.jpg"
           alt="Detail van de Knapper & Luxe charcuterie"
         >
 
