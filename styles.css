@@ -392,16 +392,14 @@ html {
   
   .how-it-works {
     padding: 8rem 0 10rem;
-    background: linear-gradient(to bottom, #f8f5f0, var(--offwhite));
-    text-align: center;
-  }
-
-  .comparison-section {
-    background-image: url("top-view-cheese-assortment-with-copy-space.jpg");
+     background-image: url("top-view-cheese-assortment-with-copy-space.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
   }
+
+
   
   .section-title {
     font-size: clamp(2.8rem, 6vw, 4.5rem);
@@ -559,6 +557,9 @@ html {
     max-width: 1400px;
     margin: 0 auto;
   }
+
+  
+
   
   .comparison-item {
     background: white;
@@ -582,6 +583,17 @@ html {
     display: block;
     cursor: pointer;
   }
+.custom-menu{
+  margin-top: 2rem;
+  background-color: var(--offwhite);
+  padding: 20px;
+  border-radius: 1em;
+  border: 2px solid black;
+}
+
+.custom-text{
+  margin-bottom: 1em;
+}
   
   
   
@@ -662,9 +674,17 @@ html {
     background: var(--accent);
     color: #1a1816;
   }
+
+  .concept-section{
+    padding: 8rem 0;
+  }
   
   .over-section {
     padding: 8rem 0;
+      background-image: url("top-view-arrangement-different-types-cheese-with-copy-space.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
   }
   
@@ -782,10 +802,6 @@ html {
   .contact-form {
     margin: 0 auto;
     text-align: left;
-    background-image: url("top-view-arrangement-different-types-cheese-with-copy-space.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     padding: 3rem;
     box-shadow: 0 20px 60px rgba(0,0,0,0.08);
   }
