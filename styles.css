@@ -315,7 +315,7 @@ html {
     font-size: clamp(5rem, 8vw, 6.5rem);
     font-weight: 800;
     letter-spacing: -0.04em;
-    line-height: 0.92;
+    line-height: 1.2;
     margin: 0 0 1.2rem;
     text-shadow: 0 8px 32px rgba(0,0,0,0.65);
     background: linear-gradient(90deg, var(--accent), #e8d5b7, var(--accent));
