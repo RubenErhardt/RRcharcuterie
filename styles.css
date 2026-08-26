@@ -1260,3 +1260,16 @@ html {
     width: 100px;
   }
 }
+
+.terms-page{
+  margin-top: 2rem;
+}
+
+.terms-page h1{
+  font-size: 5em;
+}
+
+.terms-section{
+  margin-bottom: 2rem;
+}
+
