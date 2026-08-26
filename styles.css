@@ -1273,3 +1273,17 @@ html {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 720px) {
+ .terms-page h1 {
+  font-size: 3em;
+ }
+}
+
+@media (max-width: 440px) {
+ .terms-page h1 {
+  font-size: 2em;
+ }
+}
+  
+
+
