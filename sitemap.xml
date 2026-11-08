@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+       <loc>https://rrcharcuterie.nl/</loc>
+       <lastmod>2026-08-26T12:58:15+00:00</lastmod>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://rrcharcuterie.nl/charcuterie-basis.html</loc>
+       <lastmod>2026-08-26T12:58:14+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://rrcharcuterie.nl/charcuterie-333.html</loc>
+       <lastmod>2026-08-26T12:58:15+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://rrcharcuterie.nl/privacy.html</loc>
+       <lastmod>2026-08-26T12:58:15+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://rrcharcuterie.nl/algemeen.html</loc>
+       <lastmod>2026-08-26T12:58:15+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://rrcharcuterie.nl/The%20classic%20menu.pdf</loc>
+       <lastmod>2026-08-26T12:58:15+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://rrcharcuterie.nl/The%20Special%20menu.pdf</loc>
+       <lastmod>2026-08-26T12:58:15+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://rrcharcuterie.nl/privacy</loc>
+       <lastmod>2026-08-26T12:58:15+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+</urlset>
